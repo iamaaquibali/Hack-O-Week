@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, sans-serif;
+        }
+
+        .video-bg {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 50px auto;
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border-radius: 14px;
+            color: #fff;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border: 2px dashed #ccc;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 28px 0 15px;
+        }
+
+        .event-details p {
+            text-align: center;
+            font-size: 15px;
+            margin: 6px 0;
+        }
+
+        .highlights {
+            margin-top: 18px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .highlights ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .highlights li {
+            margin-bottom: 6px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 14px;
+            font-size: 14px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            margin-top: 6px;
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .two-col {
+            display: flex;
+            gap: 12px;
+        }
+
+        .two-col div {
+            flex: 1;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background: #00bcd4;
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #00acc1;
+        }
+    </style>
+</head>
+<body>
+
+<video class="video-bg" autoplay muted loop>
+    <source src="bgvidd.mp4" type="video/mp4">
+</video>
+
+
+<div class="overlay"></div>
+
+<div class="container">
+
+
+    <div>
+	<img src="dlogo.png" alt="Event Logo" class="logo">
+</div>
+
+    <h1>Tech Innovators Meetup 2026</h1>
+
+    <div class="event-details">
+        <p>15 March 2026 | 10:00 AM – 4:00 PM</p>
+        <p>Main Auditorium, Symbiosis Institute of Technology, Nagpur</p>
+        <p>
+            A one-day immersive technology event bringing together students,
+            startups, and industry experts to explore innovation and future trends.
+        </p>
+    </div>
+
+    <div class="highlights">
+        <strong>Event Highlights:</strong>
+        <ul>
+            <li>Keynote sessions by industry leaders</li>
+            <li>Panel discussion on AI, Web3 & Startups</li>
+            <li>Hands-on workshops and live demos</li>
+            <li>Startup pitch showcase</li>
+            <li>Networking with founders and recruiters</li>
+        </ul>
+
+        <p><strong>Eligibility:</strong> Open to students, professionals, and tech enthusiasts.</p>
+        <p><strong>Registration Fee:</strong> Free (Limited seats available)</p>
+    </div>
+
+    <h2>Register Now</h2>
+
+    <form>
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <div class="two-col">
+            <div>
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+            <div>
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number">
+            </div>
+        </div>
+
+        <label>College / Organization</label>
+        <input type="text" placeholder="Your college or company name">
+
+        <div class="two-col">
+            <div>
+                <label>Role</label>
+                <select>
+                    <option>Student</option>
+                    <option>Professional</option>
+                    <option>Faculty</option>
+                    <option>Startup Founder</option>
+                </select>
+            </div>
+            <div>
+                <label>Year / Experience</label>
+                <select>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                    <option>Working Professional</option>
+                </select>
+            </div>
+        </div>
+
+        <label>Areas of Interest</label>
+        <select>
+            <option>Artificial Intelligence</option>
+            <option>Web Development</option>
+            <option>Cybersecurity</option>
+            <option>Startups & Entrepreneurship</option>
+            <option>Data Science</option>
+        </select>
+
+        <label>Why do you want to attend this event?</label>
+        <textarea rows="3" placeholder="Tell us briefly..."></textarea>
+
+        <label>How did you hear about this event?</label>
+        <select>
+            <option>College / University</option>
+            <option>Social Media</option>
+            <option>Friends</option>
+            <option>Email</option>
+            <option>Other</option>
+        </select>
+
+        <button type="submit">Confirm Registration</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
